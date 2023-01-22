@@ -9,6 +9,9 @@ public class CreateUserCommandHandler implements CommandHandler<CreateUserComman
     @Override
     public void handle(CreateUserCommand command) {
         System.out.println("Command Handler: " + command);
+        System.out.println(command.getUsername());
+        System.out.println(command.getId());
+        System.out.println(command.getEmail());
     }
 
 }

@@ -13,6 +13,7 @@
         <module>domain</module>
         <module>application</module>
         <module>infraestructure</module>
+        <module>bootloader</module>
     </modules>
 
 </project>
