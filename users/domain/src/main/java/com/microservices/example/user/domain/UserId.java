@@ -8,4 +8,8 @@ public class UserId {
     public UserId(UUID userId) {
         this.userId = userId;
     }
+
+    public UUID getValue() {
+        return userId;
+    }
 }

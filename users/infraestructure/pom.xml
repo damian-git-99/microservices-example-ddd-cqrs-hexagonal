@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>rest</module>
+        <module>mysql-users-repository</module>
     </modules>
 
 </project>
