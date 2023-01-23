@@ -37,5 +37,5 @@ public class CreateUserController {
 class CreateUserRequest {
     private String username;
     private String email;
-    private UUID Id;
+    private UUID id;
 }
