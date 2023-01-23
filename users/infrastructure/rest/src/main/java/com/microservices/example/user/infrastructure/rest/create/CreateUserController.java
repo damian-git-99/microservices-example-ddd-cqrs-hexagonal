@@ -5,6 +5,7 @@ import com.microservices.example.user.application.create.CreateUserCommand;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -21,6 +22,7 @@ public class CreateUserController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody CreateUserRequest request) throws Exception {
         CreateUserCommand command = new CreateUserCommand(
                 request.getId(),
