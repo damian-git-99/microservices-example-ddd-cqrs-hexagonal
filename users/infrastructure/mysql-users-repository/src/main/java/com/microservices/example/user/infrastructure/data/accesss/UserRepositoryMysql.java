@@ -20,6 +20,11 @@ public class UserRepositoryMysql implements UserRepository {
     }
 
     @Override
+    public void deleteUser(UserId userId) {
+        userRepositoryJPA.deleteById(userId.getValue());
+    }
+
+    @Override
     public Optional<User> findUser(UserId id) {
         Optional<UserEntity> entity = userRepositoryJPA.findById(id.getValue());
         if (entity.isEmpty()) {
