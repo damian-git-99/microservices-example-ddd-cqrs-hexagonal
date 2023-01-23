@@ -1,4 +1,4 @@
-package com.microservices.example.user.infraestructure.data.accesss;
+package com.microservices.example.user.infrastructure.data.accesss;
 
 import com.microservices.example.user.domain.User;
 import com.microservices.example.user.domain.UserEmail;

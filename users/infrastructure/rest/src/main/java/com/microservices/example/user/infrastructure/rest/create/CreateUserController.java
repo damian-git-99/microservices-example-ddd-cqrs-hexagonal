@@ -1,4 +1,4 @@
-package com.microservices.example.user.infraestructure.rest.create;
+package com.microservices.example.user.infrastructure.rest.create;
 
 import com.microservices.example.common.domain.command.CommandBus;
 import com.microservices.example.user.application.create.CreateUserCommand;

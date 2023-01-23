@@ -1,4 +1,4 @@
-package com.microservices.example.common.infraestructure.command;
+package com.microservices.example.common.infrastructure.command;
 
 import com.microservices.example.common.domain.command.Command;
 import com.microservices.example.common.domain.command.CommandBus;

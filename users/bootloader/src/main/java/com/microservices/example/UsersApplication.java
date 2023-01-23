@@ -10,10 +10,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "com.microservices.example.common"
 })
 @EntityScan(basePackages = {
-        "com.microservices.example.user.infraestructure.data.accesss"
+        "com.microservices.example.user.infrastructure.data.accesss"
 })
 @EnableJpaRepositories(basePackages = {
-        "com.microservices.example.user.infraestructure.data.accesss"
+        "com.microservices.example.user.infrastructure.data.accesss"
 })
 public class UsersApplication {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.microservices.example.user.infraestructure.data.accesss;
+package com.microservices.example.user.infrastructure.data.accesss;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
