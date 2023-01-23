@@ -2,10 +2,10 @@ package com.microservices.example.user.infrastructure.rest.create;
 
 import com.microservices.example.common.domain.command.CommandBus;
 import com.microservices.example.user.application.create.CreateUserCommand;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -21,12 +21,21 @@ public class CreateUserController {
     }
 
     @PostMapping
-    public void create() throws Exception {
+    public void create(@RequestBody CreateUserRequest request) throws Exception {
         CreateUserCommand command = new CreateUserCommand(
-                UUID.randomUUID(),
-                "damian",
-                "damian@gmail.com"
+                request.getId(),
+                request.getUsername(),
+                request.getEmail()
         );
         commandBus.dispatch(command);
     }
+
+}
+
+@Data
+@NoArgsConstructor
+class CreateUserRequest {
+    private String username;
+    private String email;
+    private UUID Id;
 }

@@ -4,6 +4,7 @@ package com.microservices.example.user.infrastructure.data.accesss;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,6 +18,7 @@ public class UserEntity {
     @Type(type = "uuid-char")
     private UUID id;
     private String username;
+    @Column(unique = true)
     private String email;
 
     public UserEntity(UUID id, String username, String email) {

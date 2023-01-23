@@ -21,7 +21,6 @@ public class CreateUserCommandHandler implements CommandHandler<CreateUserComman
         UserId id = new UserId(command.getId());
         UserName name = new UserName(command.getUsername());
         UserEmail email = new UserEmail(command.getEmail());
-        System.out.println(id.getValue());
         userCreator.create(id, name, email);
     }
 
