@@ -11,6 +11,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>domain-common</module>
-        <module>infraestructure-common</module>
+        <module>infrastructure-common</module>
     </modules>
 </project>
