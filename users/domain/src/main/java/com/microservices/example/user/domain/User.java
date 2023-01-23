@@ -1,22 +1,15 @@
 package com.microservices.example.user.domain;
 
-public class User {
-    private UserId id;
+import com.microservices.example.common.domain.entity.BaseEntity;
+
+public class User extends BaseEntity<UserId> {
     private UserName name;
     private UserEmail email;
 
     public User(UserId id, UserName name, UserEmail email) {
-        this.id = id;
+        super.setId(id);
         this.name = name;
         this.email = email;
-    }
-
-    public UserId getId() {
-        return id;
-    }
-
-    public void setId(UserId id) {
-        this.id = id;
     }
 
     public UserName getName() {
