@@ -13,5 +13,11 @@ services:
       - '3308'
     volumes:
       - my-db:/var/lib/mysql
+  rabbitmq:
+    image: rabbitmq:3.9.11-management-alpine
+    container_name: rabbitmq-container
+    ports:
+      - "5672:5672"
+      - "15672:15672"
 volumes:
   my-db:
