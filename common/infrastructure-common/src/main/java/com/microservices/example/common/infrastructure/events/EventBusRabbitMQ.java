@@ -18,7 +18,7 @@ public class EventBusRabbitMQ implements EventBus {
 
     @Override
     public void publish(DomainEvent event) {
-        rabbitTemplate.convertAndSend(EXCHANGE, event.eventName(), event);
+        rabbitTemplate.convertAndSend(EXCHANGE, event.eventName() + ".key", event);
     }
 
 }

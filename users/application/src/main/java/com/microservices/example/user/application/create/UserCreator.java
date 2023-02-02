@@ -19,8 +19,12 @@ public class UserCreator {
     public void create(UserId id, UserName username, UserEmail email) {
         User user = new User(id, username, email);
         userRepository.saveUser(user);
-        // TODO: publish user created event
-        eventBus.publish(new UserCreatedEvent(id.getValue().toString(), username.getValue(), email.getValue()));
+        UserCreatedEvent event = new UserCreatedEvent(
+                id.getValue().toString(),
+                username.getValue(),
+                email.getValue()
+        );
+        eventBus.publish(event);
     }
 
 }
