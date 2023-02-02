@@ -1,6 +1,18 @@
 services:
+  users:
+    container_name: users-container
+    build:
+      context: ./users/bootloader
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mysql
+      - rabbitmq
   mysql:
     image: mysql:8.0.19
+    container_name: mysql-container
     restart: always
     environment:
       MYSQL_DATABASE: 'users'
