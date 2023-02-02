@@ -2,8 +2,8 @@ services:
   users:
     container_name: users-container
     build:
-      context: ./users/bootloader
-      dockerfile: Dockerfile
+      context: ./
+      dockerfile: ./users/bootloader/Dockerfile
     restart: always
     ports:
       - '8080:8080'
