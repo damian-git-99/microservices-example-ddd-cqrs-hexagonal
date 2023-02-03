@@ -27,6 +27,7 @@ services:
       - my-db:/var/lib/mysql
   rabbitmq:
     image: rabbitmq:3.9.11-management-alpine
+    restart: always
     container_name: rabbitmq-container
     ports:
       - "5672:5672"
