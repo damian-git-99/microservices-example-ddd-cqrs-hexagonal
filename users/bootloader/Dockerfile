@@ -1,5 +1,6 @@
 FROM maven:3.8.6-openjdk-11-slim as builder
 WORKDIR /app
+COPY ./pom.xml .
 COPY ./users ./users
 COPY ./common ./common
 RUN mvn clean package
