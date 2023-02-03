@@ -1,15 +1,8 @@
-FROM openjdk:11-slim-buster as builder
+FROM maven:3.8.6-openjdk-11-slim as builder
 WORKDIR /app
-COPY ./pom.xml ./
-COPY /.mvn ./.mvn
-COPY ./mvnw .
 COPY ./users ./users
 COPY ./common ./common
-
-#WORKDIR /app/users/bootloader/
-# RUN ./mvnw clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip && rm -r ./target/
-RUN ./mvnw clean package -Dmaven.test.skip
-ENTRYPOINT ls /app/users/domain
+RUN mvn clean package
 
 FROM openjdk:11-slim-buster
 WORKDIR /app
