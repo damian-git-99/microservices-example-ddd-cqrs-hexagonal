@@ -21,7 +21,6 @@ RUN mvn clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackag
 COPY ./users ./users
 COPY ./common ./common
 RUN mvn clean package -DskipTests
-ENTRYPOINT ls -al users/bootloader/target
 
 # Run the app
 FROM openjdk:11-slim-buster
