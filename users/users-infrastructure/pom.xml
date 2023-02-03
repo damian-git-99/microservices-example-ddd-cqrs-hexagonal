@@ -10,7 +10,7 @@
     <artifactId>users-infrastructure</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>rest</module>
+        <module>users-rest</module>
         <module>mysql-users-repository</module>
         <module>users-messaging</module>
     </modules>

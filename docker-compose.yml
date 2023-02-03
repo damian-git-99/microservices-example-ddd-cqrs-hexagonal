@@ -3,7 +3,7 @@ services:
     container_name: users-container
     build:
       context: ./
-      dockerfile: ./users/bootloader/Dockerfile
+      dockerfile: ./users/users-bootloader/Dockerfile
     restart: always
     ports:
       - '8080:8080'

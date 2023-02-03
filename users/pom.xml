@@ -10,10 +10,10 @@
     <artifactId>users</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>domain</module>
-        <module>application</module>
-        <module>infrastructure</module>
-        <module>bootloader</module>
+        <module>users-domain</module>
+        <module>users-application</module>
+        <module>users-infrastructure</module>
+        <module>users-bootloader</module>
     </modules>
 
 </project>
