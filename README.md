@@ -27,6 +27,8 @@ Microservices using ddd, cqrs, hexagonal architecture with spring boot.
 - Delete post
 - Find post
 - Find Posts by user
-## Installation
 
-    
+## Run the project with docker
+- Install [docker](https://www.docker.com/products/docker-desktop/)
+- cd to the root of the project
+- Run the command `docker-compose up -d`
