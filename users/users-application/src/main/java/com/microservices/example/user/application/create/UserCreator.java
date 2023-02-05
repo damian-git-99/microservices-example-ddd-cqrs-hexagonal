@@ -8,17 +8,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserCreator {
 
-    private final UserRepository userRepository;
+    private final UserCommandRepository userCommandRepository;
     private final EventBus eventBus;
 
-    public UserCreator(UserRepository userRepository, EventBus eventBus) {
-        this.userRepository = userRepository;
+    public UserCreator(UserCommandRepository userCommandRepository, EventBus eventBus) {
+        this.userCommandRepository = userCommandRepository;
         this.eventBus = eventBus;
     }
 
     public void create(UserId id, UserName username, UserEmail email) {
+        // TODO: check if email already exists
         User user = new User(id, username, email);
-        userRepository.saveUser(user);
+        userCommandRepository.saveUser(user);
         UserCreatedEvent event = new UserCreatedEvent(
                 id.getValue().toString(),
                 username.getValue(),

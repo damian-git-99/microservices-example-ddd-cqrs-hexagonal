@@ -1,20 +1,20 @@
 package com.microservices.example.user.application.delete;
 
 import com.microservices.example.user.domain.UserId;
-import com.microservices.example.user.domain.UserRepository;
+import com.microservices.example.user.domain.UserCommandRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserDeleter {
 
-    private final UserRepository userRepository;
+    private final UserCommandRepository userCommandRepository;
 
-    public UserDeleter(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserDeleter(UserCommandRepository userCommandRepository) {
+        this.userCommandRepository = userCommandRepository;
     }
 
     public void delete(UserId userId) {
-        userRepository.deleteUser(userId);
+        userCommandRepository.deleteUser(userId);
         // todo send event
     }
 

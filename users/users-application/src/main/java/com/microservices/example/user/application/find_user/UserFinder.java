@@ -1,9 +1,6 @@
 package com.microservices.example.user.application.find_user;
 
-import com.microservices.example.user.domain.User;
-import com.microservices.example.user.domain.UserId;
-import com.microservices.example.user.domain.UserNotFoundException;
-import com.microservices.example.user.domain.UserRepository;
+import com.microservices.example.user.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -11,14 +8,14 @@ import java.util.Optional;
 @Service
 public class UserFinder {
 
-    private final UserRepository userRepository;
+    private final UserQueryRepository userCommandRepository;
 
-    public UserFinder(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserFinder(UserQueryRepository userCommandRepository) {
+        this.userCommandRepository = userCommandRepository;
     }
 
     public FindUserResponse find(UserId userId) {
-        Optional<User> user = userRepository.findUser(userId);
+        Optional<User> user = userCommandRepository.findUser(userId);
         if (user.isEmpty()) {
             String message = String.format("User with id %s not found", userId.getValue());
             throw new UserNotFoundException(message);

@@ -10,7 +10,7 @@
     <artifactId>notifications</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
+    <modules >
         <module>notification-application</module>
         <module>notification-infrastructure</module>
         <module>notification-bootloader</module>
