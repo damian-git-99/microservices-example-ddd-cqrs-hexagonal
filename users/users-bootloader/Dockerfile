@@ -16,6 +16,16 @@ COPY ./users/users-infrastructure/pom.xml ./users/users-infrastructure/pom.xml
 COPY ./users/users-infrastructure/users-rest/pom.xml ./users/users-infrastructure/users-rest/pom.xml
 COPY ./users/users-infrastructure/users-messaging/pom.xml ./users/users-infrastructure/users-messaging/pom.xml
 COPY ./users/users-infrastructure/mysql-users-repository/pom.xml ./users/users-infrastructure/mysql-users-repository/pom.xml
+# COPY notifications microservice poms: TODO: try to remove this, because it is not needed for users microservice, bat it is needed for the parent pom.xml
+COPY ./notifications/pom.xml ./notifications/pom.xml
+COPY ./notifications/notification-domain/pom.xml ./notifications/notification-domain/pom.xml
+COPY ./notifications/notification-application/pom.xml ./notifications/notification-application/pom.xml
+COPY ./notifications/notification-bootloader/pom.xml ./notifications/notification-bootloader/pom.xml
+COPY ./notifications/notification-infrastructure/pom.xml ./notifications/notification-infrastructure/pom.xml
+COPY ./notifications/notification-infrastructure/notification-email-service/pom.xml ./notifications/notification-infrastructure/notification-email-service/pom.xml
+COPY ./notifications/notification-infrastructure/notification-messaging/pom.xml ./notifications/notification-infrastructure/notification-messaging/pom.xml
+
+# install dependencies
 RUN mvn clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip
 # copy source code
 COPY ./users ./users

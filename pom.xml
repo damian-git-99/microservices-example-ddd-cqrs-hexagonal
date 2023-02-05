@@ -19,16 +19,6 @@
   </modules>
   <packaging>pom</packaging>
 
-  <profiles>
-    <profile>
-      <id>build-users</id>
-      <modules>
-        <module>users</module>
-        <module>common</module>
-      </modules>
-    </profile>
-  </profiles>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
