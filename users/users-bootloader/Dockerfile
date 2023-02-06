@@ -24,6 +24,7 @@ COPY ./notifications/notification-bootloader/pom.xml ./notifications/notificatio
 COPY ./notifications/notification-infrastructure/pom.xml ./notifications/notification-infrastructure/pom.xml
 COPY ./notifications/notification-infrastructure/notification-email-service/pom.xml ./notifications/notification-infrastructure/notification-email-service/pom.xml
 COPY ./notifications/notification-infrastructure/notification-messaging/pom.xml ./notifications/notification-infrastructure/notification-messaging/pom.xml
+COPY ./notifications/notification-infrastructure/mysql-email-repository/pom.xml ./notifications/notification-infrastructure/mysql-email-repository/pom.xml
 
 # install dependencies
 RUN mvn clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip
