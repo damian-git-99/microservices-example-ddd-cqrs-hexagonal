@@ -27,11 +27,11 @@ COPY ./notifications/notification-infrastructure/notification-messaging/pom.xml 
 COPY ./notifications/notification-infrastructure/mysql-email-repository/pom.xml ./notifications/notification-infrastructure/mysql-email-repository/pom.xml
 
 # install dependencies
-RUN mvn clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip
+RUN mvn clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip -pl notifications -am
 # copy source code
 COPY ./users ./users
 COPY ./common ./common
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -pl notifications -am
 
 # Run the app
 FROM openjdk:11-slim-buster

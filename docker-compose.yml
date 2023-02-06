@@ -10,6 +10,17 @@ services:
     depends_on:
       - mysql
       - rabbitmq
+  notifications:
+    container_name: notifications-container
+    build:
+      context: ./
+      dockerfile: ./notifications/notification-bootloader/Dockerfile
+    restart: always
+    ports:
+      - '8081:8081'
+    depends_on:
+      - mysql-emails
+      - rabbitmq
   mysql:
     image: mysql:8.0.19
     container_name: mysql-container
