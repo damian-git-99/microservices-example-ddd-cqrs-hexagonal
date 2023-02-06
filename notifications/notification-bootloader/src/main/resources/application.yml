@@ -3,7 +3,17 @@ server:
 spring:
   application:
     name: notification
-
+  datasource:
+    password: password
+    url: jdbc:mysql://host.docker.internal:3309/email
+    username: damian
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
   rabbitmq:
     addresses: amqp://host.docker.internal:5672/
     username: guest

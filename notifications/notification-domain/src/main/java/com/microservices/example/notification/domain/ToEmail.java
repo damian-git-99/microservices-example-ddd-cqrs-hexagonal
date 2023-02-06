@@ -7,7 +7,7 @@ public class ToEmail {
         this.toEmail = toEmail;
     }
 
-    public String getToEmail() {
+    public String getValue() {
         return toEmail;
     }
 }

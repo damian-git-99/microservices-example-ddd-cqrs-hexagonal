@@ -12,6 +12,7 @@
     <modules>
         <module>notification-messaging</module>
         <module>notification-email-service</module>
+        <module>mysql-email-repository</module>
     </modules>
 
 </project>

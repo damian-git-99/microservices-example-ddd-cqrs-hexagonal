@@ -25,6 +25,21 @@ services:
       - '3308'
     volumes:
       - my-db:/var/lib/mysql
+  mysql-emails:
+    image: mysql:8.0.19
+    container_name: mysql-container-emails
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'email'
+      MYSQL_USER: 'damian'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3309:3306'
+    expose:
+      - '3309'
+    volumes:
+      - my-db-email:/var/lib/mysql
   rabbitmq:
     image: rabbitmq:3.9.11-management-alpine
     restart: always
@@ -34,3 +49,4 @@ services:
       - "15672:15672"
 volumes:
   my-db:
+  my-db-email:

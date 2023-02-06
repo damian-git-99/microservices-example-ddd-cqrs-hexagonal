@@ -1,17 +1,12 @@
 package com.microservices.example.notification.domain;
 
 public class Email {
-    private final EmailId id;
     private final ToEmail toEmail;
     private boolean isSent;
 
-    public Email(EmailId id, ToEmail toEmail) {
-        this.id = id;
+    public Email(ToEmail toEmail) {
         this.toEmail = toEmail;
-    }
-
-    public EmailId getId() {
-        return id;
+        this.isSent = false;
     }
 
     public ToEmail getToEmail() {
