@@ -5,7 +5,6 @@ import com.microservices.example.common.domain.command.Command;
 import java.util.UUID;
 
 public class CreatePostCommand extends Command {
-
     private final UUID id;
     private final String title;
     private final String content;
