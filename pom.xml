@@ -16,6 +16,7 @@
     <module>users</module>
     <module>common</module>
     <module>notifications</module>
+      <module>posts</module>
   </modules>
   <packaging>pom</packaging>
 
