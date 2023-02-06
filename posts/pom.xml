@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>posts-domain</module>
+        <module>posts-application</module>
     </modules>
 
 </project>
