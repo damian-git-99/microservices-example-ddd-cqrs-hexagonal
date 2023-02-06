@@ -1,7 +1,7 @@
 package com.microservices.example.user.application.find_user;
 
 import com.microservices.example.common.domain.query.QueryHandler;
-import com.microservices.example.user.domain.UserId;
+import com.microservices.example.common.domain.valueobjects.UserId;
 import org.springframework.stereotype.Component;
 
 @Component

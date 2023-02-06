@@ -1,7 +1,7 @@
 package com.microservices.example.user.application.delete;
 
 import com.microservices.example.common.domain.command.CommandHandler;
-import com.microservices.example.user.domain.UserId;
+import com.microservices.example.common.domain.valueobjects.UserId;
 import org.springframework.stereotype.Component;
 
 @Component

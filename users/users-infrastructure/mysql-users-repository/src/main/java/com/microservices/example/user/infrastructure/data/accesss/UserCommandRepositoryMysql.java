@@ -1,10 +1,9 @@
 package com.microservices.example.user.infrastructure.data.accesss;
 
+import com.microservices.example.common.domain.valueobjects.UserId;
 import com.microservices.example.user.domain.*;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import java.util.Optional;
 
 @Component
 @AllArgsConstructor

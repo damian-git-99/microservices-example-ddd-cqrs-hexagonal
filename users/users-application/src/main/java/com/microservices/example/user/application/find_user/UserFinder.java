@@ -1,5 +1,6 @@
 package com.microservices.example.user.application.find_user;
 
+import com.microservices.example.common.domain.valueobjects.UserId;
 import com.microservices.example.user.domain.*;
 import org.springframework.stereotype.Service;
 

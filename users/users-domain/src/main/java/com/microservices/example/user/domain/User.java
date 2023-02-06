@@ -1,6 +1,7 @@
 package com.microservices.example.user.domain;
 
 import com.microservices.example.common.domain.entity.BaseEntity;
+import com.microservices.example.common.domain.valueobjects.UserId;
 
 public class User extends BaseEntity<UserId> {
     private UserName name;

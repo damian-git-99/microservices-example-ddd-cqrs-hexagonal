@@ -1,8 +1,8 @@
 package com.microservices.example.user.infrastructure.data.accesss;
 
+import com.microservices.example.common.domain.valueobjects.UserId;
 import com.microservices.example.user.domain.User;
 import com.microservices.example.user.domain.UserEmail;
-import com.microservices.example.user.domain.UserId;
 import com.microservices.example.user.domain.UserName;
 import org.springframework.stereotype.Component;
 
