@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: users
+  datasource:
+    password: password
+    url: jdbc:mysql://host.docker.internal:3310/post
+    username: damian
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  rabbitmq:
+    addresses: amqp://rabbitmq:5672/
+    username: guest
+    password: guest
