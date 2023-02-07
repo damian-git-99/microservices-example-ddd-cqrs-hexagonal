@@ -53,7 +53,7 @@ services:
       - my-db-email:/var/lib/mysql
   mysql-posts:
     image: mysql:8.0.19
-    container_name: mysql-container-emails
+    container_name: mysql-container-posts
     restart: always
     environment:
       MYSQL_DATABASE: 'post'

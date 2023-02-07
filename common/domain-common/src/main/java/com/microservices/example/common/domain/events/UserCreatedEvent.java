@@ -1,17 +1,18 @@
 package com.microservices.example.common.domain.events;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class UserCreatedEvent implements DomainEvent, Serializable {
 
-    private String id;
+    private UUID id;
     private String name;
     private String email;
 
     public UserCreatedEvent() {
     }
 
-    public UserCreatedEvent(String id, String name, String email) {
+    public UserCreatedEvent(UUID id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -22,11 +23,11 @@ public class UserCreatedEvent implements DomainEvent, Serializable {
         return "user.created";
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

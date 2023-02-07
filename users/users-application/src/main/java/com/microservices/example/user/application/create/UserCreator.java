@@ -22,7 +22,7 @@ public class UserCreator {
         User user = new User(id, username, email);
         userCommandRepository.saveUser(user);
         UserCreatedEvent event = new UserCreatedEvent(
-                id.getValue().toString(),
+                id.getValue(),
                 username.getValue(),
                 email.getValue()
         );
