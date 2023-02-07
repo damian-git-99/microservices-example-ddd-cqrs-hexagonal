@@ -1,4 +1,4 @@
-package com.microservices.example.post.infrastructure.data.access;
+package com.microservices.example.post.infrastructure.data.access.post;
 
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;

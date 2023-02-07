@@ -15,6 +15,6 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
   rabbitmq:
-    addresses: amqp://rabbitmq:5672/
+    addresses: amqp://host.docker.internal:5672/
     username: guest
     password: guest

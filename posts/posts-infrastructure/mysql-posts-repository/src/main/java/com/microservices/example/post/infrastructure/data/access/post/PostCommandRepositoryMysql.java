@@ -1,4 +1,4 @@
-package com.microservices.example.post.infrastructure.data.access;
+package com.microservices.example.post.infrastructure.data.access.post;
 
 import com.microservices.example.post.domain.Post;
 import com.microservices.example.post.domain.PostCommandRepository;

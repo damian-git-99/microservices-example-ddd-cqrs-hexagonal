@@ -2,7 +2,9 @@ package com.microservices.example.post.application.delete_post;
 
 import com.microservices.example.post.domain.Post;
 import com.microservices.example.post.domain.PostCommandRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PostDeleter {
 
     private final PostCommandRepository repository;
