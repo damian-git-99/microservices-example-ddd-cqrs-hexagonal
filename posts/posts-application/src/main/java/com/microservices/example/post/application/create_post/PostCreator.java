@@ -25,7 +25,7 @@ public class PostCreator {
     public void createPost(Post post) {
         Optional<User> user = userRepository.findUserById(post.getUserId());
         if (user.isEmpty()) {
-            // TODO: create exception
+            // TODO: use a custom exception
             throw new RuntimeException("User not found");
         }
         repository.createPost(post);

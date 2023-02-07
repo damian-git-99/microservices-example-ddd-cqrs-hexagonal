@@ -19,6 +19,7 @@ public class PostFinderById {
     public FindPostByIdQueryResponse find(PostId postId) {
         Optional<Post> post = repository.findPostById(postId);
         if (post.isEmpty()) {
+            // TODO: use a custom exception
             throw new RuntimeException("Post not found");
         }
         return FindPostByIdQueryResponse.builder()
