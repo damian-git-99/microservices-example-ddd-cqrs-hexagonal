@@ -3,13 +3,13 @@ package com.microservices.example.post.domain;
 import java.util.UUID;
 
 public class PostId {
-    private UUID id;
+    private UUID value;
 
-    public PostId(UUID id) {
-        this.id = id;
+    public PostId(UUID value) {
+        this.value = value;
     }
 
-    public UUID getId() {
-        return id;
+    public UUID getValue() {
+        return value;
     }
 }

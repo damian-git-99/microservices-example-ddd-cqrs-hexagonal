@@ -8,6 +8,9 @@ public class Post extends BaseEntity<PostId> {
     private PostContent content;
     private UserId userId;
 
+    public Post() {
+    }
+
     public Post(PostId id, PostTitle title, PostContent content, UserId userId) {
         super.setId(id);
         this.title = title;
