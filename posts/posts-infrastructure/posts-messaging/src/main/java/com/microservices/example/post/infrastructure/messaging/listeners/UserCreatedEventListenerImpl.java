@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCreatedEventListenerImpl implements UserCreatedEventListener {
 
-    private static final String QUEUE_NAME = "user.created.queue";
+    private static final String QUEUE_NAME = "post.user.created.queue";
 
     private final UserRepository userRepository;
 
@@ -29,7 +29,7 @@ public class UserCreatedEventListenerImpl implements UserCreatedEventListener {
 
     @Override
     public String queueName() {
-        return "post.user.created.queue";
+        return QUEUE_NAME;
     }
 
     @Override
