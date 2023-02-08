@@ -26,4 +26,14 @@ public class UserCreatedEventListenerImpl implements UserCreatedEventListener {
         User user = new User(new UserId(event.getId()));
         userRepository.saveUser(user);
     }
+
+    @Override
+    public String queueName() {
+        return "post.user.created.queue";
+    }
+
+    @Override
+    public UserCreatedEvent domainEvent() {
+        return new UserCreatedEvent();
+    }
 }

@@ -27,4 +27,14 @@ public class UserCreatedEventListenerRabbitMQ implements UserCreatedEventListene
         emailRepository.saveEmail(email);
     }
 
+    @Override
+    public String queueName() {
+        return "notification.user.created.queue";
+    }
+
+    @Override
+    public UserCreatedEvent domainEvent() {
+        return new UserCreatedEvent();
+    }
+
 }

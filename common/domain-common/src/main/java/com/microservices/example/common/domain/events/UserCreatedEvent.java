@@ -19,7 +19,7 @@ public class UserCreatedEvent implements DomainEvent, Serializable {
     }
 
     @Override
-    public String eventName() {
+    public String keyName() {
         return "user.created";
     }
 
