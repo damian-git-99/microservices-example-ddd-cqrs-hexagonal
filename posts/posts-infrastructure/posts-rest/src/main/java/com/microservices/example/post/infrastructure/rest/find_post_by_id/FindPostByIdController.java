@@ -6,6 +6,7 @@ import com.microservices.example.post.application.find_post_by_id.FindPostByIdQu
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,10 +23,11 @@ public class FindPostByIdController {
     }
 
     @GetMapping("/{postId}")
-    public void findPostById(UUID postId) throws Exception {
+    public FindPostByIdQueryResponseController findPostById(@PathVariable UUID postId)
+            throws Exception {
         FindPostByIdQuery query = new FindPostByIdQuery(postId);
         FindPostByIdQueryResponse response = queryBus.handle(query);
-        FindPostByIdQueryResponseController.builder()
+        return FindPostByIdQueryResponseController.builder()
                 .id(response.getPostId())
                 .title(response.getTitle())
                 .content(response.getContent())
