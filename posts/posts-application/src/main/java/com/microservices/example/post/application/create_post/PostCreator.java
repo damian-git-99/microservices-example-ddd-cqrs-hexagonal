@@ -1,10 +1,7 @@
 package com.microservices.example.post.application.create_post;
 
 import com.microservices.example.common.domain.events.EventBus;
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostCommandRepository;
-import com.microservices.example.post.domain.User;
-import com.microservices.example.post.domain.UserRepository;
+import com.microservices.example.post.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -25,8 +22,7 @@ public class PostCreator {
     public void createPost(Post post) {
         Optional<User> user = userRepository.findUserById(post.getUserId());
         if (user.isEmpty()) {
-            // TODO: use a custom exception
-            throw new RuntimeException("User not found");
+            throw new UserNotFoundException("User not found: " + post.getUserId());
         }
         repository.createPost(post);
         // TODO: publish event

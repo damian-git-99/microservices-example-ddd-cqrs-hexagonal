@@ -2,6 +2,7 @@ package com.microservices.example.post.application.find_post_by_id;
 
 import com.microservices.example.post.domain.Post;
 import com.microservices.example.post.domain.PostId;
+import com.microservices.example.post.domain.PostNotFoundException;
 import com.microservices.example.post.domain.PostQueryRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +20,7 @@ public class PostFinderById {
     public FindPostByIdQueryResponse find(PostId postId) {
         Optional<Post> post = repository.findPostById(postId);
         if (post.isEmpty()) {
-            // TODO: use a custom exception
-            throw new RuntimeException("Post not found");
+            throw new PostNotFoundException("Post not found: " + postId.getValue());
         }
         return FindPostByIdQueryResponse.builder()
                 .postId(post.get().getId().getValue())
