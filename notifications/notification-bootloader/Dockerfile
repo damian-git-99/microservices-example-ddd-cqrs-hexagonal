@@ -2,9 +2,11 @@ FROM maven:3.8.6-openjdk-11-slim as builder
 WORKDIR /app
 COPY ./pom.xml .
 COPY ./users ./users
+COPY ./posts ./posts
 COPY ./notifications ./notifications
 COPY ./common ./common
-RUN mvn clean package -DskipTests -pl users -am
+RUN mvn clean package -DskipTests
+#ENTRYPOINT ls notifications/notification-bootloader
 
 FROM openjdk:11-slim-buster
 WORKDIR /app
