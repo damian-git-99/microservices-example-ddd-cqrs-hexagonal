@@ -22,7 +22,7 @@ public class PostCreator {
     public void createPost(Post post) {
         Optional<User> user = userRepository.findUserById(post.getUserId());
         if (user.isEmpty()) {
-            throw new UserNotFoundException("User not found: " + post.getUserId());
+            throw new UserNotFoundException("User not found: " + post.getUserId().getValue());
         }
         repository.createPost(post);
         // TODO: publish event

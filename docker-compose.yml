@@ -21,6 +21,17 @@ services:
     depends_on:
       - mysql-emails
       - rabbitmq
+  posts:
+    container_name: posts-container
+    build:
+      context: ./
+      dockerfile: ./posts/posts-bootloader/Dockerfile
+    restart: always
+    ports:
+      - '8082:8082'
+    depends_on:
+      - mysql-posts
+      - rabbitmq
   mysql:
     image: mysql:8.0.19
     container_name: mysql-container
