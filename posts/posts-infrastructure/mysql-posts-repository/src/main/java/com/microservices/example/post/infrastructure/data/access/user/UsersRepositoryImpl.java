@@ -21,6 +21,11 @@ public class UsersRepositoryImpl implements UserRepository {
     }
 
     @Override
+    public void deleteUser(UserId userId) {
+        userRepositoryJPA.deleteById(userId.getValue());
+    }
+
+    @Override
     public Optional<User> findUserById(UserId id) {
         UserEntity userEntity = userRepositoryJPA.findById(id.getValue())
                 .orElse(null);
