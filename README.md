@@ -61,4 +61,4 @@ with body:
 ```
 - Delete Post: ```DELETE /api/v1/posts/{id}```
 - Find Post by id: ```GET /api/v1/posts/{id}```
-- Find Posts by user: ```GET /api/v1/user-posts/{userId}```
+- Find Posts by user: ```GET /api/v1/posts/user-posts/{userId}```

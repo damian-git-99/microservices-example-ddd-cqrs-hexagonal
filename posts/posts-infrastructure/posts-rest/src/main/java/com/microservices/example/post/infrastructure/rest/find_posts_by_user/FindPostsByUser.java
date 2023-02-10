@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -24,14 +25,9 @@ public class FindPostsByUser {
     }
 
     @GetMapping("/user-posts/{userId}")
-    public FindPostsByUserResponseController findPostsByUser(@PathVariable UUID userId) throws Exception {
+    public List<FindPostsByUserResponse> findPostsByUser(@PathVariable UUID userId) throws Exception {
         FindPostsByUserQuery query = new FindPostsByUserQuery(userId);
-        FindPostsByUserResponse response = queryBus.handle(query);
-        return FindPostsByUserResponseController.builder()
-                .id(response.getPostId())
-                .title(response.getTitle())
-                .content(response.getContent())
-                .build();
+        return queryBus.handle(query);
     }
 
 }
