@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCreatedEventListenerRabbitMQ implements UserCreatedEventListener {
 
-    private static final String QUEUE_NAME = "user.created.queue";
+    private static final String QUEUE_NAME = "notification.user.created.queue";
     private final EmailRepository emailRepository;
 
     public UserCreatedEventListenerRabbitMQ(EmailRepository emailRepository) {
@@ -25,6 +25,16 @@ public class UserCreatedEventListenerRabbitMQ implements UserCreatedEventListene
         System.out.println("Received event: " + event);
         Email email  = new Email(new ToEmail(event.getEmail()));
         emailRepository.saveEmail(email);
+    }
+
+    @Override
+    public String queueName() {
+        return QUEUE_NAME;
+    }
+
+    @Override
+    public UserCreatedEvent domainEvent() {
+        return new UserCreatedEvent();
     }
 
 }

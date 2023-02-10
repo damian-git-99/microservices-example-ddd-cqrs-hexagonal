@@ -5,7 +5,7 @@ import com.microservices.example.common.domain.valueobjects.UserId;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CommandDeleteUserHandler implements CommandHandler<CommandDeleteUser> {
+public class CommandDeleteUserHandler implements CommandHandler<DeleteUserCommand> {
 
     private final UserDeleter userDeleter;
 
@@ -14,7 +14,7 @@ public class CommandDeleteUserHandler implements CommandHandler<CommandDeleteUse
     }
 
     @Override
-    public void handle(CommandDeleteUser command) throws Exception {
+    public void handle(DeleteUserCommand command) throws Exception {
         UserId userId = new UserId(command.getUserId());
         userDeleter.delete(userId);
     }

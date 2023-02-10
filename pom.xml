@@ -16,6 +16,7 @@
     <module>users</module>
     <module>common</module>
     <module>notifications</module>
+      <module>posts</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -23,6 +24,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+    <image>damiangalvan/${project.artifactId}:${project.version}</image>
   </properties>
 
   <dependencies>
@@ -41,5 +43,45 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>3.1.4</version>
+          <configuration>
+            <from>
+              <image>eclipse-temurin:11</image>
+              <platforms>
+                <platform>
+                  <architecture>arm64</architecture>
+                  <os>linux</os>
+                </platform>
+                <platform>
+                  <architecture>amd64</architecture>
+                  <os>linux</os>
+                </platform>
+              </platforms>
+            </from>
+            <to>
+              <tags>
+                <tag>latest</tag>
+              </tags>
+            </to>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>build</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
 </project>

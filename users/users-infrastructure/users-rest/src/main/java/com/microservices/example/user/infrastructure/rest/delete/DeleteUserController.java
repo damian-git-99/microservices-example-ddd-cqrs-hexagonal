@@ -1,7 +1,7 @@
 package com.microservices.example.user.infrastructure.rest.delete;
 
 import com.microservices.example.common.domain.command.CommandBus;
-import com.microservices.example.user.application.delete.CommandDeleteUser;
+import com.microservices.example.user.application.delete.DeleteUserCommand;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +20,7 @@ public class DeleteUserController {
 
     @DeleteMapping("/{userId}")
     public void delete(@PathVariable UUID userId) throws Exception {
-        commandBus.dispatch(new CommandDeleteUser(userId));
+        commandBus.dispatch(new DeleteUserCommand(userId));
     }
 
 }

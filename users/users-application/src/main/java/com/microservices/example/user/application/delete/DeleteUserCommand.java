@@ -4,10 +4,10 @@ import com.microservices.example.common.domain.command.Command;
 
 import java.util.UUID;
 
-public class CommandDeleteUser extends Command {
+public class DeleteUserCommand extends Command {
     private UUID userId;
 
-    public CommandDeleteUser(UUID userId) {
+    public DeleteUserCommand(UUID userId) {
         this.userId = userId;
     }
 
