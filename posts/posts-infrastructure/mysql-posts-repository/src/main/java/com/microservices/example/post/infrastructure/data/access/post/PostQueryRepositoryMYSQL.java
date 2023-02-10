@@ -20,7 +20,7 @@ public class PostQueryRepositoryMYSQL implements PostQueryRepository {
 
     @Override
     public List<Post> findPostsByUser(UserId userId) {
-        return postRepositoryJPA.findAllByUserId(userId.getValue())
+        return postRepositoryJPA.findPostsByUserId(userId.getValue())
                 .stream()
                 .map(postMapper::mapToDomain)
                 .collect(Collectors.toList());
