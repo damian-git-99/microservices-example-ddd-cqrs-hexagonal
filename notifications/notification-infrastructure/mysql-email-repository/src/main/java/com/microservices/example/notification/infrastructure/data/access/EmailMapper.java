@@ -1,7 +1,7 @@
 package com.microservices.example.notification.infrastructure.data.access;
 
-import com.microservices.example.notification.domain.Email;
-import com.microservices.example.notification.domain.ToEmail;
+import com.microservices.example.notification.domain.entities.Email;
+import com.microservices.example.notification.domain.valueobjects.ToEmail;
 
 import java.util.List;
 import java.util.stream.Collectors;

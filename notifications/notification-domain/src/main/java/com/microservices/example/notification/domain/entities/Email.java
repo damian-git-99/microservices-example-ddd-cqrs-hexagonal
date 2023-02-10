@@ -1,4 +1,6 @@
-package com.microservices.example.notification.domain;
+package com.microservices.example.notification.domain.entities;
+
+import com.microservices.example.notification.domain.valueobjects.ToEmail;
 
 public class Email {
     private final ToEmail toEmail;

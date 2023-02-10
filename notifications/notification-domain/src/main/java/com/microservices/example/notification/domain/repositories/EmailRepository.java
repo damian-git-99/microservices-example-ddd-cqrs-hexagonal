@@ -1,4 +1,6 @@
-package com.microservices.example.notification.domain;
+package com.microservices.example.notification.domain.repositories;
+
+import com.microservices.example.notification.domain.entities.Email;
 
 import java.util.List;
 

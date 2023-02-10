@@ -2,8 +2,8 @@ package com.microservices.example.notification.infrastructure.email.service;
 
 import com.microservices.example.notification.application.event.scheduler.SchedulerEmailService;
 import com.microservices.example.notification.application.event.services.EmailService;
-import com.microservices.example.notification.domain.Email;
-import com.microservices.example.notification.domain.EmailRepository;
+import com.microservices.example.notification.domain.entities.Email;
+import com.microservices.example.notification.domain.repositories.EmailRepository;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

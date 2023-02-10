@@ -1,4 +1,4 @@
-package com.microservices.example.notification.domain;
+package com.microservices.example.notification.domain.valueobjects;
 
 public class ToEmail {
     private String toEmail;

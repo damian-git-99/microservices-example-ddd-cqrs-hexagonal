@@ -1,7 +1,7 @@
 package com.microservices.example.notification.infrastructure.data.access;
 
-import com.microservices.example.notification.domain.Email;
-import com.microservices.example.notification.domain.EmailRepository;
+import com.microservices.example.notification.domain.entities.Email;
+import com.microservices.example.notification.domain.repositories.EmailRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

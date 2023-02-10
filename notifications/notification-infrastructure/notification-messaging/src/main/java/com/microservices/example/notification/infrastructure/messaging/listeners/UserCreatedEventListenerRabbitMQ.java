@@ -2,10 +2,9 @@ package com.microservices.example.notification.infrastructure.messaging.listener
 
 import com.microservices.example.common.domain.events.UserCreatedEvent;
 import com.microservices.example.notification.application.event.listeners.UserCreatedEventListener;
-import com.microservices.example.notification.application.event.services.EmailService;
-import com.microservices.example.notification.domain.Email;
-import com.microservices.example.notification.domain.EmailRepository;
-import com.microservices.example.notification.domain.ToEmail;
+import com.microservices.example.notification.domain.entities.Email;
+import com.microservices.example.notification.domain.repositories.EmailRepository;
+import com.microservices.example.notification.domain.valueobjects.ToEmail;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
