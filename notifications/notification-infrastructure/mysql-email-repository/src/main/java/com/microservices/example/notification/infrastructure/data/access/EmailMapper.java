@@ -1,6 +1,8 @@
 package com.microservices.example.notification.infrastructure.data.access;
 
 import com.microservices.example.notification.domain.entities.Email;
+import com.microservices.example.notification.domain.valueobjects.Message;
+import com.microservices.example.notification.domain.valueobjects.Subject;
 import com.microservices.example.notification.domain.valueobjects.ToEmail;
 
 import java.util.List;
@@ -17,7 +19,9 @@ public class EmailMapper {
 
     public Email toDomain(EmailEntity emailEntity) {
         return new Email(
-                new ToEmail(emailEntity.getToEmail())
+                new ToEmail(emailEntity.getToEmail()),
+                new Subject(emailEntity.getSubject()),
+                new Message(emailEntity.getMessage())
         );
     }
 

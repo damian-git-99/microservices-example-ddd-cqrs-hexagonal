@@ -4,7 +4,6 @@ import java.util.UUID;
 
 public class UserDeletedEvent implements DomainEvent {
     private UUID id;
-
     public UserDeletedEvent() {
     }
 

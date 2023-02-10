@@ -20,7 +20,6 @@ Microservices using ddd, cqrs, hexagonal architecture with spring boot.
 
 ### 2. Notification Microservice
 - Send email notification when a user is created
-- Send email notification when a post is created
 
 ### 3 Post Microservice
 - Create post

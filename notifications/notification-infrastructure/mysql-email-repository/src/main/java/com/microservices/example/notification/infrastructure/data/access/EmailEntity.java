@@ -9,6 +9,8 @@ public class EmailEntity {
     @Id
     @Column(unique = true)
     private String toEmail;
+    private String subject;
+    private String message;
     private boolean isSent;
 
     public EmailEntity() {
@@ -33,5 +35,21 @@ public class EmailEntity {
 
     public void setSent(boolean sent) {
         isSent = sent;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
