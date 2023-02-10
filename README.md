@@ -28,6 +28,7 @@ Microservices using ddd, cqrs, hexagonal architecture with spring boot.
 - Find Posts by user
 
 ## Run the project with docker
+- clone the project `git clone https://github.com/damian-git-99/microservices-example-ddd-cqrs-hexagonal.git`
 - Install [docker](https://www.docker.com/products/docker-desktop/)
 - cd to the root of the project
 - Run the command `docker-compose up -d`
