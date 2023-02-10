@@ -1,9 +1,7 @@
 services:
   users:
     container_name: users-container
-    build:
-      context: ./
-      dockerfile: ./users/users-bootloader/Dockerfile
+    image: damiangalvan/users-bootloader:latest
     restart: always
     ports:
       - '8080:8080'
@@ -12,9 +10,7 @@ services:
       - rabbitmq
   notifications:
     container_name: notifications-container
-    build:
-      context: ./
-      dockerfile: ./notifications/notification-bootloader/Dockerfile
+    image: damiangalvan/notification-bootloader:latest
     restart: always
     ports:
       - '8081:8081'
@@ -23,9 +19,7 @@ services:
       - rabbitmq
   posts:
     container_name: posts-container
-    build:
-      context: ./
-      dockerfile: ./posts/posts-bootloader/Dockerfile
+    image: damiangalvan/posts-bootloader:latest
     restart: always
     ports:
       - '8082:8082'
