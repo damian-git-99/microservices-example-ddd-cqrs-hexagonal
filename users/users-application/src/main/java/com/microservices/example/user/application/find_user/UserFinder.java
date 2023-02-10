@@ -1,7 +1,9 @@
 package com.microservices.example.user.application.find_user;
 
 import com.microservices.example.common.domain.valueobjects.UserId;
-import com.microservices.example.user.domain.*;
+import com.microservices.example.user.domain.entities.User;
+import com.microservices.example.user.domain.exceptions.UserNotFoundException;
+import com.microservices.example.user.domain.repositories.UserQueryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

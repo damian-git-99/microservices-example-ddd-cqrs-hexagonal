@@ -3,7 +3,10 @@ package com.microservices.example.user.application.create;
 import com.microservices.example.common.domain.events.EventBus;
 import com.microservices.example.common.domain.events.UserCreatedEvent;
 import com.microservices.example.common.domain.valueobjects.UserId;
-import com.microservices.example.user.domain.*;
+import com.microservices.example.user.domain.entities.User;
+import com.microservices.example.user.domain.repositories.UserCommandRepository;
+import com.microservices.example.user.domain.valueobjects.UserEmail;
+import com.microservices.example.user.domain.valueobjects.UserName;
 import org.springframework.stereotype.Service;
 
 @Service

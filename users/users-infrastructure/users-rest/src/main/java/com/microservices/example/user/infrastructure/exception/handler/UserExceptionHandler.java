@@ -1,6 +1,6 @@
 package com.microservices.example.user.infrastructure.exception.handler;
 
-import com.microservices.example.user.domain.UserNotFoundException;
+import com.microservices.example.user.domain.exceptions.UserNotFoundException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,4 +1,4 @@
-package com.microservices.example.user.domain;
+package com.microservices.example.user.domain.valueobjects;
 
 public class UserName {
     private String username;
