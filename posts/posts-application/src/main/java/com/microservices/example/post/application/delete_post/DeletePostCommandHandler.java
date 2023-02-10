@@ -1,8 +1,8 @@
 package com.microservices.example.post.application.delete_post;
 
 import com.microservices.example.common.domain.command.CommandHandler;
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostId;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.valueobjects.PostId;
 import org.springframework.stereotype.Component;
 
 @Component

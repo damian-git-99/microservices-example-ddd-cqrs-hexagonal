@@ -1,9 +1,9 @@
 package com.microservices.example.post.application.find_post_by_id;
 
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostId;
-import com.microservices.example.post.domain.PostNotFoundException;
-import com.microservices.example.post.domain.PostQueryRepository;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.valueobjects.PostId;
+import com.microservices.example.post.domain.exceptions.PostNotFoundException;
+import com.microservices.example.post.domain.repositories.PostQueryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

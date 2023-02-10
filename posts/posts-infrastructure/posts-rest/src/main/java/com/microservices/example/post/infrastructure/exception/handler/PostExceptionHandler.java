@@ -1,7 +1,7 @@
 package com.microservices.example.post.infrastructure.exception.handler;
 
-import com.microservices.example.post.domain.PostNotFoundException;
-import com.microservices.example.post.domain.UserNotFoundException;
+import com.microservices.example.post.domain.exceptions.PostNotFoundException;
+import com.microservices.example.post.domain.exceptions.UserNotFoundException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

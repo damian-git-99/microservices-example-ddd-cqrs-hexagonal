@@ -1,7 +1,7 @@
 package com.microservices.example.post.infrastructure.data.access.post;
 
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostCommandRepository;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.repositories.PostCommandRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

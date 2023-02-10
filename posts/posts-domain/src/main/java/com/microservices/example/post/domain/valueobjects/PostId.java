@@ -1,4 +1,4 @@
-package com.microservices.example.post.domain;
+package com.microservices.example.post.domain.valueobjects;
 
 import java.util.UUID;
 

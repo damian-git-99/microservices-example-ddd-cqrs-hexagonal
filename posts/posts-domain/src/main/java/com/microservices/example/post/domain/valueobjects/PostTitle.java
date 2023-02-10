@@ -1,4 +1,4 @@
-package com.microservices.example.post.domain;
+package com.microservices.example.post.domain.valueobjects;
 
 public class PostTitle {
     private String value;

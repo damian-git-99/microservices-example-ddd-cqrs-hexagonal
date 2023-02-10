@@ -1,8 +1,8 @@
 package com.microservices.example.post.application.find_posts_by_user;
 
 import com.microservices.example.common.domain.valueobjects.UserId;
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostQueryRepository;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.repositories.PostQueryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.microservices.example.post.application.find_post_by_id;
 
 
 import com.microservices.example.common.domain.query.QueryHandler;
-import com.microservices.example.post.domain.PostId;
+import com.microservices.example.post.domain.valueobjects.PostId;
 import org.springframework.stereotype.Component;
 
 @Component

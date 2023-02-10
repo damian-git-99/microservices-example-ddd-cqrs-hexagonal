@@ -1,10 +1,10 @@
 package com.microservices.example.post.infrastructure.data.access.post;
 
 import com.microservices.example.common.domain.valueobjects.UserId;
-import com.microservices.example.post.domain.Post;
-import com.microservices.example.post.domain.PostContent;
-import com.microservices.example.post.domain.PostId;
-import com.microservices.example.post.domain.PostTitle;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.valueobjects.PostContent;
+import com.microservices.example.post.domain.valueobjects.PostId;
+import com.microservices.example.post.domain.valueobjects.PostTitle;
 import org.springframework.stereotype.Component;
 
 @Component

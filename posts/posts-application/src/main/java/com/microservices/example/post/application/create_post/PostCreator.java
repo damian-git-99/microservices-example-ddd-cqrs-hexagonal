@@ -1,7 +1,11 @@
 package com.microservices.example.post.application.create_post;
 
 import com.microservices.example.common.domain.events.EventBus;
-import com.microservices.example.post.domain.*;
+import com.microservices.example.post.domain.entities.Post;
+import com.microservices.example.post.domain.exceptions.UserNotFoundException;
+import com.microservices.example.post.domain.repositories.PostCommandRepository;
+import com.microservices.example.post.domain.repositories.UserRepository;
+import com.microservices.example.post.domain.valueobjects.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

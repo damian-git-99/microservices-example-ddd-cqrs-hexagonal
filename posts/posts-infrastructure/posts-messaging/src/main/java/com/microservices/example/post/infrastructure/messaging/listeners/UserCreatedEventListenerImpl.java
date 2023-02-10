@@ -3,8 +3,8 @@ package com.microservices.example.post.infrastructure.messaging.listeners;
 import com.microservices.example.common.domain.events.UserCreatedEvent;
 import com.microservices.example.common.domain.valueobjects.UserId;
 import com.microservices.example.post.application.listeners.UserCreatedEventListener;
-import com.microservices.example.post.domain.User;
-import com.microservices.example.post.domain.UserRepository;
+import com.microservices.example.post.domain.valueobjects.User;
+import com.microservices.example.post.domain.repositories.UserRepository;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 

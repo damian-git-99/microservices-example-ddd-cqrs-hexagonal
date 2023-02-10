@@ -1,4 +1,4 @@
-package com.microservices.example.post.domain;
+package com.microservices.example.post.domain.valueobjects;
 
 import com.microservices.example.common.domain.valueobjects.UserId;
 

@@ -1,8 +1,8 @@
 package com.microservices.example.post.infrastructure.data.access.user;
 
 import com.microservices.example.common.domain.valueobjects.UserId;
-import com.microservices.example.post.domain.User;
-import com.microservices.example.post.domain.UserRepository;
+import com.microservices.example.post.domain.valueobjects.User;
+import com.microservices.example.post.domain.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

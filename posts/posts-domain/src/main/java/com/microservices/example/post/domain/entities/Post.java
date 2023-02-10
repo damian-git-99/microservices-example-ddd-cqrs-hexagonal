@@ -1,7 +1,10 @@
-package com.microservices.example.post.domain;
+package com.microservices.example.post.domain.entities;
 
 import com.microservices.example.common.domain.entity.BaseEntity;
 import com.microservices.example.common.domain.valueobjects.UserId;
+import com.microservices.example.post.domain.valueobjects.PostContent;
+import com.microservices.example.post.domain.valueobjects.PostId;
+import com.microservices.example.post.domain.valueobjects.PostTitle;
 
 public class Post extends BaseEntity<PostId> {
     private PostTitle title;
