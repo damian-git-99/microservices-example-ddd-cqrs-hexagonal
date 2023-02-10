@@ -16,9 +16,11 @@ public class EmailEntity {
     public EmailEntity() {
     }
 
-    public EmailEntity(String toEmail, boolean isSent) {
+    public EmailEntity(String toEmail, String subject, String message) {
         this.toEmail = toEmail;
-        this.isSent = isSent;
+        this.subject = subject;
+        this.message = message;
+        this.isSent = false;
     }
 
     public String getToEmail() {

@@ -28,4 +28,12 @@ public class Email {
     public void setSent(boolean sent) {
         isSent = sent;
     }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public Message getMessage() {
+        return message;
+    }
 }

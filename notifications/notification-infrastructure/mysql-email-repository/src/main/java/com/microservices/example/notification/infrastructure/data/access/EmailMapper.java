@@ -13,7 +13,8 @@ public class EmailMapper {
     public EmailEntity toEntity(Email email) {
         return new EmailEntity(
                 email.getToEmail().getValue(),
-                email.isSent()
+                email.getSubject().getValue(),
+                email.getMessage().getValue()
         );
     }
 
