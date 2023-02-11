@@ -18,6 +18,7 @@ public class PostEntity {
     private UUID id;
     private String title;
     private String content;
+    @Type(type = "uuid-char")
     private UUID userId;
 
     public PostEntity(UUID id, String title, String content, UUID userId) {
