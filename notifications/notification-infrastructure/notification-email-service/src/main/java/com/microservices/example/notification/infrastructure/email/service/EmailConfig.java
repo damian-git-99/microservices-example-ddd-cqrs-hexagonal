@@ -1,5 +1,6 @@
 package com.microservices.example.notification.infrastructure.email.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -10,14 +11,18 @@ import java.util.Properties;
 @Configuration
 public class EmailConfig {
 
+    @Value("${email}")
+    private String email;
+    @Value("${email-password}")
+    private String password;
+
     @Bean
     public JavaMailSender getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
-
-        mailSender.setUsername("damiangalvan66@gmail.com");
-        mailSender.setPassword("qjacityxyjgqnexv");
+        mailSender.setUsername(email);
+        mailSender.setPassword(password);
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");

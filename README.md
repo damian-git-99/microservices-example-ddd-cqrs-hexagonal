@@ -29,6 +29,9 @@ Microservices using ddd, cqrs, hexagonal architecture with spring boot.
 
 ## Run the project with docker
 - clone the project `git clone https://github.com/damian-git-99/microservices-example-ddd-cqrs-hexagonal.git`
+- Notification Service config
+    * to send emails a gmail account is used, so you have to set an application password: following the steps below https://support.google.com/mail/answer/185833?hl=en-GB
+    * set the email and password in the file `notification/notification-bootloader/src/main/resources/application.yml`
 - Install [docker](https://www.docker.com/products/docker-desktop/)
 - cd to the root of the project
 - Run the command `docker-compose up -d`
