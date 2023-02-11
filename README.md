@@ -31,10 +31,17 @@ Microservices using ddd, cqrs, event-based communication, hexagonal architecture
 - clone the project `git clone https://github.com/damian-git-99/microservices-example-ddd-cqrs-hexagonal.git`
 - Notification Service config
     * To send emails a gmail account is used, so you have to generate an application password: following the steps below https://support.google.com/mail/answer/185833?hl=en-GB
-    * Set the email and password in the file `notification/notification-bootloader/src/main/resources/application.yml`
+    * Set the email and password in the file `docker-compose.yml` in the environment variables of the service `notifications`
 - Install [docker](https://www.docker.com/products/docker-desktop/)
 - cd to the root of the project
 - Run the command `docker-compose up -d`
+
+#### If you make any changes in the code you need to rebuild the images of the microservices and push them to docker hub
+- Install [maven](https://maven.apache.org/install.html)
+- change docker user in the root file `pom.xml` in property `image` and in `docker-compose.yml` in property `image`
+- docker login with your docker hub credentials `docker login`
+- cd to the root of the project
+- Run the command `mvn clean -P build-docker-image package`
 
 ## API Reference
 ### 1. User Microservice ```http://localhost:8080```

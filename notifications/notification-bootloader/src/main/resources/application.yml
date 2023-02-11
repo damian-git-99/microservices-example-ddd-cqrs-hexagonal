@@ -18,6 +18,6 @@ spring:
     addresses: amqp://rabbitmq:5672/
     username: guest
     password: guest
-email: "damiangalvan66@gmail.com"
-email-password: "qjacityxyjgqnexv"
+email: ${EMAIL}
+email-password: ${EMAIL_PASSWORD}
 
