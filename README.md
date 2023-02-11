@@ -1,7 +1,7 @@
 
 # Microservices
 
-Microservices using ddd, cqrs, hexagonal architecture with spring boot.
+Microservices using ddd, cqrs, event-based communication, hexagonal architecture with spring boot.
 
 ## Architecture
 - User Microservice: This microservice is responsible for managing users.
