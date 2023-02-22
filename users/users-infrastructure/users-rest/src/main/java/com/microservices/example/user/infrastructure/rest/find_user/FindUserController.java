@@ -1,4 +1,4 @@
-package com.microservices.example.user.infrastructure.rest.find;
+package com.microservices.example.user.infrastructure.rest.find_user;
 
 import com.microservices.example.common.domain.query.QueryBus;
 import com.microservices.example.user.application.find_user.FindUserQuery;

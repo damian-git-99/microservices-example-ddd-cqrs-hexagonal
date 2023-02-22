@@ -1,4 +1,4 @@
-package com.microservices.example.user.infrastructure.rest.delete;
+package com.microservices.example.user.infrastructure.rest.delete_user;
 
 import com.microservices.example.common.domain.command.CommandBus;
 import com.microservices.example.user.application.delete.DeleteUserCommand;
