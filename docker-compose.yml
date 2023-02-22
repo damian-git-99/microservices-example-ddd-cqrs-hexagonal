@@ -12,8 +12,8 @@ services:
     container_name: notifications-container
     image: damiangalvan/notification-bootloader:latest
     environment:
-      EMAIL: 'damiangalvan66@gmail.com'
-      EMAIL_PASSWORD: 'qjacityxyjgqnexv'
+      EMAIL: 'email'
+      EMAIL_PASSWORD: 'password_key'
     restart: always
     ports:
       - '8081:8081'
